@@ -82,7 +82,6 @@ def generate_sales_data(dates, skus, stores, ext_features, promo_calendar):
             for i, d in enumerate(dates):
                 doy = d.timetuple().tm_yday
                 dow = d.weekday()
-                t = i / NUM_DAYS
 
                 base = cfg["base_demand"] * store_scale
                 trend = base * cfg["trend"] * i
